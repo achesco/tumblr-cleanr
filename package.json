@@ -1,0 +1,39 @@
+{
+  "name": "tumblr-cleanr",
+  "version": "0.1.0",
+  "description": "Broken media posts cleaning tool",
+  "main": "index.js",
+  "dependencies": {
+    "console-stamp": "0.2.5",
+    "node-fetch": "1.6.3",
+    "rx": "4.1.0",
+    "tumblr.js": "1.1.1",
+    "yargs": "7.0.2"
+  },
+  "bin": {
+    "tumblr-cleanr": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/achesco/tumblr-cleanr.git"
+  },
+  "keywords": [
+    "tumblr",
+    "video",
+    "tool",
+    "error",
+    "403",
+    "access denied",
+    "clean",
+    "blog"
+  ],
+  "author": "Anton Lysenko <achesco@gmail.com> (http://antonlysenko.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/achesco/tumblr-cleanr/issues"
+  },
+  "homepage": "https://github.com/achesco/tumblr-cleanr#readme"
+}
