@@ -21,16 +21,24 @@ Rx.Observable.fromPromise(tumblr.blogPosts(BLOG, {
 }))
     .do(data => console.log('total', data.total_posts))
     .flatMap(data => {
-        return Rx.Observable.range(0, Math.ceil(Math.min(data.total_posts, LIMIT) / PER_PAGE))
-            .concatMap(idx => {
-                return Rx.Observable.of(idx).delay(REQUEST_DELAY);
-            })
-            .flatMap(idx => {
-                return Rx.Observable.fromPromise(tumblr.blogPosts(BLOG, {
+        const postsCount = Math.min(data.total_posts, LIMIT),
+            pagesCount = Math.ceil(postsCount / PER_PAGE);
+
+        const paramsArr = Array.apply(null, {length: pagesCount})
+            .map((_, i) => {
+                return {
                     type: 'video',
-                    offset: idx * PER_PAGE,
-                    limit: PER_PAGE
-                }));
+                    offset: i * PER_PAGE,
+                    limit: i < pagesCount - 1 ? PER_PAGE : postsCount - i * PER_PAGE
+                }
+            });
+
+        return Rx.Observable.from(paramsArr)
+            .concatMap(params => {
+                return Rx.Observable.of(params).delay(REQUEST_DELAY);
+            })
+            .flatMap(params => {
+                return Rx.Observable.fromPromise(tumblr.blogPosts(BLOG, params));
             });
     })
     .do(data => console.log('posts', data.posts.length))
