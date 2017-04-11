@@ -26,7 +26,7 @@ Cleaning up through all posts in blog:
 tumblr-cleanr myBlogName --credentials path/to/keys.json
 ```
 
-Cleaning up through last 30 posts in blog:
+Cleaning up through last 30 video-posts in blog:
 ```bash
 tumblr-cleanr myBlogName --credentials path/to/keys.json --limit 30
 ```
