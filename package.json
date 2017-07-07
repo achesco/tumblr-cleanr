@@ -1,6 +1,6 @@
 {
   "name": "tumblr-cleanr-cli",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Broken media posts cleaning tool",
   "main": "index.js",
   "dependencies": {
