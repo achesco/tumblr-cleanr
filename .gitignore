@@ -7,5 +7,4 @@ node_modules
 tmp
 
 credentials.json
-*.keys
-
+*.keys.json
