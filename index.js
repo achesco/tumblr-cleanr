@@ -13,8 +13,6 @@ const cli = require('./lib/cli'),
     PER_PAGE = 20,
     REQUEST_DELAY = 1000;
 
-require('console-stamp')(console, {pattern: 'dd/mm/yyyy HH:MM:ss.l'});
-
 Rx.Observable.fromPromise(tumblr.blogPosts(BLOG, {
     type: 'video',
     limit: 1
