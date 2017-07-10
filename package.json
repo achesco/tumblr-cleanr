@@ -1,6 +1,6 @@
 {
   "name": "tumblr-cleanr-cli",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Broken media posts cleaning tool",
   "main": "index.js",
   "dependencies": {
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/achesco/tumblr-cleanr.git"
+    "url": "git+https://github.com/achesco/tumblr-cleanr-cli.git"
   },
   "keywords": [
     "tumblr",
@@ -32,7 +32,7 @@
   "author": "Anton Lysenko <achesco@gmail.com> (http://antonlysenko.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/achesco/tumblr-cleanr/issues"
+    "url": "https://github.com/achesco/tumblr-cleanr-cli/issues"
   },
-  "homepage": "https://github.com/achesco/tumblr-cleanr#readme"
+  "homepage": "https://github.com/achesco/tumblr-cleanr-cli#readme"
 }
